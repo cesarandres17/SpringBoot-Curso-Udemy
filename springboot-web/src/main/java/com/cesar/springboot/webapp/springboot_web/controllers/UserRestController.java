@@ -26,11 +26,7 @@ public class UserRestController {
 
     }
 
-    @GetMapping("/list")
-    public String getMethodName(@RequestParam String param) {
-        return new String();
-    }
-
+    @GetMapping(path = "/list")
     public List<User> list() {
         User user1 = new User("cesar", "roa");
         User user2 = new User("carlos", "roa");
