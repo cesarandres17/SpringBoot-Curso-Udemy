@@ -3,16 +3,25 @@ package com.cesar.springboot.webapp.springboot_web.models;
 public class User {
 
     private String name;
-
     private String lastName;
+    private String email;
 
-    public User(String name, String lastName) {
+    public User(String name, String lastName, String email) {
         this.name = name;
         this.lastName = lastName;
+        this.email = email;
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setName(String name) {

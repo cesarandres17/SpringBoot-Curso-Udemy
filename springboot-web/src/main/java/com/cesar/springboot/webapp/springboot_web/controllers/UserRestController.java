@@ -18,7 +18,7 @@ public class UserRestController {
 
     @GetMapping(path = "/details2")
     public UserDto details() {
-        User user = new User("cesar", "roa");
+        User user = new User("cesar", "roa", "");
         UserDto userDto = new UserDto();
         userDto.setUser(user);
         userDto.setTitle("HOLA MUNDO");
@@ -28,9 +28,9 @@ public class UserRestController {
 
     @GetMapping(path = "/list")
     public List<User> list() {
-        User user1 = new User("cesar", "roa");
-        User user2 = new User("carlos", "roa");
-        User user3 = new User("fernando", "roa");
+        User user1 = new User("cesar", "roa", "");
+        User user2 = new User("carlos", "roa", "");
+        User user3 = new User("fernando", "roa", "");
         List<User> users = new ArrayList<>();
         users.add(user1);
         users.add(user2);
@@ -42,7 +42,7 @@ public class UserRestController {
     @GetMapping(path = "/details-map")
     public Map<String, Object> detailsMap() {
 
-        User user = new User("cesar", "roa");
+        User user = new User("cesar", "roa", "");
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("title", "Hola Mundo Spring Boot");
         body.put("User", user);

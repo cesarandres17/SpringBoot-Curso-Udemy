@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="ww.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +11,8 @@
     <ul>
         <li th:text="${User.name}"></li>
         <li th:text="${User.lastName}"></li>
-
-        <lith: text="${}"> </li>
+        <li th:if="${User.email != null}" th:text="${User.email}"></li>
+        <li th:if="${User.email == null}" th:text="${'no tiene email'}"></li>
         
 
 
